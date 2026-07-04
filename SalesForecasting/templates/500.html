@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Server Error{% endblock %}
+
+{% block content %}
+<section class="section text-center">
+  <div class="container">
+    <div class="result-card" data-aos="fade-up">
+      <h2>500</h2>
+      <p>Something went wrong on our side. Please try again shortly.</p>
+      <a class="btn btn-primary btn-pill" href="{{ url_for('home') }}">Return Home</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

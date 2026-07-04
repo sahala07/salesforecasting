@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}Predict Sales{% endblock %}
+
+{% block content %}
+<section class="section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8" data-aos="fade-up">
+        <div class="form-panel">
+          <div class="text-center mb-4">
+            <span class="eyebrow">Sales prediction</span>
+            <h2>Forecast your next sales window</h2>
+            <p class="section-copy">Complete the form below to generate an estimate using the trained machine learning model.</p>
+          </div>
+
+          <form method="post" novalidate class="prediction-form" id="predictionForm">
+            <div class="row g-4">
+              {% for field in features %}
+              <div class="col-md-6">
+                <div class="floating-field">
+                  <i class="fa-solid {{ field.icon }}"></i>
+                  <input type="number" class="form-control" id="{{ field.name }}" name="{{ field.name }}" placeholder="{{ field.placeholder }}" {% if field.min is not none %}min="{{ field.min }}"{% endif %} {% if field.max is not none %}max="{{ field.max }}"{% endif %} {% if field.step is not none %}step="{{ field.step }}"{% endif %} required />
+                  <label for="{{ field.name }}">{{ field.label }}</label>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+
+            <div class="d-flex justify-content-center mt-4">
+              <button class="btn btn-primary btn-pill btn-submit" type="submit">
+                <span class="btn-label">Predict Sales</span>
+                <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

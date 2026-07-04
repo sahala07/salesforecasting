@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}Prediction Result{% endblock %}
+
+{% block content %}
+<section class="section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8" data-aos="zoom-in">
+        <div class="result-card text-center">
+          <div class="result-icon">
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          <span class="eyebrow">Prediction complete</span>
+          <h2>Predicted Sales</h2>
+          <div class="prediction-value">$ {{ "%.2f"|format(prediction) }}</div>
+          <p class="result-summary">{{ summary }}</p>
+
+          <div class="row g-4 mt-3">
+            <div class="col-md-6">
+              <div class="info-card text-start">
+                <h3>Confidence card</h3>
+                <p>Model confidence is based on the trained regressor and the current input profile.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="info-card text-start">
+                <h3>Forecast summary</h3>
+                <p>The estimate is designed for planning, allocation, and revenue visibility.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-actions mt-4">
+            <a class="btn btn-primary btn-pill me-3" href="{{ url_for('predict') }}">Predict Again</a>
+            <a class="btn btn-outline btn-pill" href="{{ url_for('home') }}">Home</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}About the Project{% endblock %}
+
+{% block content %}
+<section class="section">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-7" data-aos="fade-right">
+        <div class="glass-panel">
+          <span class="eyebrow">Project overview</span>
+          <h2>Modern machine learning forecasting for revenue teams.</h2>
+          <p>This application combines a production-ready Flask experience with a trained sales prediction model to provide practical, user-friendly forecasting for retail and operations teams.</p>
+          <p>The UI is intentionally crafted to feel like a polished SaaS product rather than a generic template, with responsive layouts, elegant motion, and thoughtful interaction details.</p>
+        </div>
+      </div>
+      <div class="col-lg-5" data-aos="fade-left">
+        <div class="info-card">
+          <h3>Technologies used</h3>
+          <ul class="feature-list">
+            <li><i class="fa-solid fa-check"></i> Flask</li>
+            <li><i class="fa-solid fa-check"></i> Python</li>
+            <li><i class="fa-solid fa-check"></i> Bootstrap 5</li>
+            <li><i class="fa-solid fa-check"></i> AOS animations</li>
+            <li><i class="fa-solid fa-check"></i> scikit-learn</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4 mt-2">
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="info-card">
+          <h3>Dataset</h3>
+          <p>The forecasting demo uses a sales dataset with date, store, sales, promotion, and holiday signals.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="info-card">
+          <h3>Algorithm</h3>
+          <p>A Random Forest regressor is used to estimate future sales based on the provided features.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="info-card">
+          <h3>Author</h3>
+          <p>Built as a production-ready web app experience for showcasing ML in a practical business context.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

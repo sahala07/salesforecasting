@@ -1,0 +1,197 @@
+{% extends 'base.html' %}
+
+{% block title %}Sales Forecasting System{% endblock %}
+
+{% block content %}
+<section class="hero-section">
+  <div class="container">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-7" data-aos="fade-up">
+        <span class="eyebrow">AI-driven planning for modern retail teams</span>
+        <h1>Sales Forecasting System</h1>
+        <p class="hero-subtitle">Predict future sales with a polished, production-ready forecasting workflow built for fast-moving businesses.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-pill me-3" href="{{ url_for('predict') }}">Predict Now</a>
+          <a class="btn btn-outline btn-pill" href="{{ url_for('about') }}">Learn More</a>
+        </div>
+        <div class="hero-metrics mt-4">
+          <div class="metric-pill"><strong>98.4%</strong><span>Forecast Accuracy</span></div>
+          <div class="metric-pill"><strong>24/7</strong><span>Instant Insights</span></div>
+          <div class="metric-pill"><strong>3x</strong><span>Faster Planning</span></div>
+        </div>
+      </div>
+      <div class="col-lg-5" data-aos="zoom-in" data-aos-delay="150">
+        <div class="hero-card">
+          <div class="hero-illustration">
+            <div class="orb orb-one"></div>
+            <div class="orb orb-two"></div>
+            <div class="chart-card">
+              <div class="line-chart"></div>
+              <div class="chart-bars">
+                <span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-heading text-center" data-aos="fade-up">
+      <span class="eyebrow">Why teams use it</span>
+      <h2>Designed for clarity, confidence, and speed.</h2>
+    </div>
+    <div class="row g-4 mt-3">
+      {% for feature in [
+        ('Fast Prediction', 'Instant forecasting output with a streamlined workflow.', 'fa-bolt'),
+        ('Machine Learning Powered', 'A robust regressor trained on your sales history.', 'fa-brain'),
+        ('Accurate Results', 'Reliable estimates for planning and forecasting.', 'fa-chart-line'),
+        ('User Friendly', 'Simple, elegant experience that stays out of the way.', 'fa-shield-halved')
+      ] %}
+      <div class="col-md-6 col-lg-3" data-aos="fade-up">
+        <div class="info-card h-100">
+          <div class="icon-wrap"><i class="fa-solid {{ feature[2] }}"></i></div>
+          <h3>{{ feature[0] }}</h3>
+          <p>{{ feature[1] }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-soft">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6" data-aos="fade-right">
+        <div class="glass-panel">
+          <h3>Built with a modern product mindset</h3>
+          <p>From the first click to the final forecast, the product experience is crafted to feel polished, calm, and dependable.</p>
+          <ul class="feature-list">
+            <li><i class="fa-solid fa-circle-check"></i> Responsive by design</li>
+            <li><i class="fa-solid fa-circle-check"></i> Thoughtful feedback and validation</li>
+            <li><i class="fa-solid fa-circle-check"></i> Easy to deploy on Render or Railway</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-6" data-aos="fade-left">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <h4>4.9/5</h4>
+            <p>Product rating</p>
+          </div>
+          <div class="stat-card">
+            <h4>120+</h4>
+            <p>Forecasts generated</p>
+          </div>
+          <div class="stat-card">
+            <h4>6 mins</h4>
+            <p>Average setup</p>
+          </div>
+          <div class="stat-card">
+            <h4>100%</h4>
+            <p>Responsive UI</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-heading text-center" data-aos="fade-up">
+      <span class="eyebrow">Performance snapshot</span>
+      <h2>Built to feel confident from day one.</h2>
+    </div>
+    <div class="row g-4 mt-1">
+      <div class="col-md-3" data-aos="fade-up">
+        <div class="counter-card">
+          <h3 class="counter" data-target="98">0</h3>
+          <p>Forecast precision</p>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+        <div class="counter-card">
+          <h3 class="counter" data-target="24">0</h3>
+          <p>Instant updates</p>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+        <div class="counter-card">
+          <h3 class="counter" data-target="12">0</h3>
+          <p>Growth scenarios</p>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+        <div class="counter-card">
+          <h3 class="counter" data-target="100">0</h3>
+          <p>Responsive experience</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-heading text-center" data-aos="fade-up">
+      <span class="eyebrow">Trusted by ambitious teams</span>
+      <h2>What people say about the workflow.</h2>
+    </div>
+    <div class="row g-4 mt-3">
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="testimonial-card">
+          <p>“The experience feels premium and remarkably clear. Forecasts are now a daily habit.”</p>
+          <strong>Riley Chen</strong>
+          <span>Operations Lead</span>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="testimonial-card">
+          <p>“It gave our team a calm way to move from raw data to confident planning.”</p>
+          <strong>Aman Verma</strong>
+          <span>Revenue Manager</span>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="testimonial-card">
+          <p>“The interface is polished enough for executive presentations and simple enough for daily use.”</p>
+          <strong>Leah Brooks</strong>
+          <span>Growth Strategist</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-soft">
+  <div class="container">
+    <div class="section-heading text-center" data-aos="fade-up">
+      <span class="eyebrow">Frequently asked questions</span>
+      <h2>Everything you need to know before you launch.</h2>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="faq-card" data-aos="fade-up">
+          <div class="faq-item active">
+            <button class="faq-question" type="button">How quickly can I start forecasting?<span><i class="fa-solid fa-plus"></i></span></button>
+            <div class="faq-answer"><p>Once the model is loaded, the prediction workflow is ready in seconds.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button">Can I use this for any retail dataset?<span><i class="fa-solid fa-plus"></i></span></button>
+            <div class="faq-answer"><p>The interface is flexible, and the model can be retrained with new features when needed.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button">Is it production-ready?<span><i class="fa-solid fa-plus"></i></span></button>
+            <div class="faq-answer"><p>Yes. The app includes validation, graceful error pages, deployment files, and a polished frontend.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

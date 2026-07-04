@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Page Not Found{% endblock %}
+
+{% block content %}
+<section class="section text-center">
+  <div class="container">
+    <div class="result-card" data-aos="fade-up">
+      <h2>404</h2>
+      <p>The page you are looking for does not exist.</p>
+      <a class="btn btn-primary btn-pill" href="{{ url_for('home') }}">Return Home</a>
+    </div>
+  </div>
+</section>
+{% endblock %}
