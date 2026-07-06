@@ -11,7 +11,7 @@ FEATURE_FIELDS = [
     {"name": "store", "label": "Store ID", "type": "number", "icon": "fa-store", "placeholder": "Store ID", "min": 1, "step": 1},
     {"name": "promo", "label": "Promotion (0 or 1)", "type": "number", "icon": "fa-percent", "placeholder": "Promotion", "min": 0, "max": 1, "step": 1},
     {"name": "holiday", "label": "Holiday (0 or 1)", "type": "number", "icon": "fa-calendar-day", "placeholder": "Holiday", "min": 0, "max": 1, "step": 1},
-    {"name": "Year", "label": "Year", "type": "number", "icon": "fa-calendar", "placeholder": "Year", "min": 2020, "step": 1},
+    {"name": "Year", "label": "Year", "type": "number", "icon": "fa-calendar", "placeholder": "Year", "min": 2022, "step": 1},
     {"name": "Month", "label": "Month", "type": "number", "icon": "fa-clock", "placeholder": "Month", "min": 1, "max": 12, "step": 1},
     {"name": "Day", "label": "Day", "type": "number", "icon": "fa-calendar-alt", "placeholder": "Day", "min": 1, "max": 31, "step": 1},
 ]
